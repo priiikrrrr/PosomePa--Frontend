@@ -768,13 +768,19 @@ export default function BecomeHostScreen() {
               <TextInput
                 style={[styles.input, { backgroundColor: colors.surface, borderColor: colors.border, color: colors.textPrimary }]}
                 value={formData.ifscCode}
-                onChangeText={(v) => updateForm('ifscCode', v.toUpperCase())}
+                onChangeText={(v) => {
+                  let val = v.toUpperCase().replace(/\s/g, '');
+                  if (val.length >= 5) {
+                    val = val.slice(0, 4) + '0' + val.slice(5);
+                  }
+                  updateForm('ifscCode', val);
+                }}
                 placeholder="e.g., SBIN0001234"
                 placeholderTextColor={colors.textLight}
                 autoCapitalize="characters"
                 maxLength={11}
               />
-              <Text style={[styles.inputHint, { color: colors.textSecondary }]}>11 characters (e.g., SBIN0001234)</Text>
+              <Text style={[styles.inputHint, { color: colors.textSecondary }]}>11 characters — 4 letters, then ZERO (0), then 6 letters/numbers</Text>
             </View>
 
             <View style={styles.inputGroup}>

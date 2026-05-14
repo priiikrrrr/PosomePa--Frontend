@@ -365,13 +365,11 @@ export default function ManageSpaces() {
       city,
     ];
     
-    // Try Nominatim (free, no API key needed)
     for (let i = 0; i < searchAttempts.length; i++) {
       const searchAddress = searchAttempts[i];
       if (!searchAddress) continue;
       
       try {
-        // Rate limit: wait between requests
         await new Promise(resolve => setTimeout(resolve, 1000));
         const encodedAddress = encodeURIComponent(searchAddress);
         
@@ -391,7 +389,6 @@ export default function ManageSpaces() {
             lng: parseFloat(data[0].lon),
           };
           
-          // Validate India bounds
           if (coords.lat >= 6 && coords.lat <= 37 && coords.lng >= 68 && coords.lng <= 98) {
             console.log('Geocoded to:', coords);
             return coords;
@@ -402,7 +399,6 @@ export default function ManageSpaces() {
       }
     }
     
-    // Default to Mumbai if nothing works
     console.log('Could not geocode, using default Mumbai coordinates');
     return { lat: 19.0760, lng: 72.8777 };
   };
