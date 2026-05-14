@@ -19,6 +19,7 @@ yarn-error.*
 .env.local
 .env.production
 GoogleService-Info.plist
+google-services.json
 .DS_Store
 Thumbs.db
 *.log
