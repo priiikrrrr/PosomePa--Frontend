@@ -57,7 +57,7 @@
     "@react-native/babel-preset": "0.74.87",
     "@react-native/metro-config": "0.74.87",
     "@react-native/typescript-config": "0.74.87",
-    "@types/react": "^19.2.14",
+    "@types/react": "^18.2.0",
     "@types/react-native": "^0.72.8",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.0.0",
