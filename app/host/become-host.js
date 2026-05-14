@@ -171,17 +171,16 @@ export default function BecomeHostScreen() {
           Alert.alert('Required', 'Please fill all required fields');
           return false;
         }
-        // Validate phone (10 digits)
+        // Validate phone 
         if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
           Alert.alert('Invalid Phone', 'Please enter a valid 10-digit phone number');
           return false;
         }
-        // Validate email
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
           Alert.alert('Invalid Email', 'Please enter a valid email address');
           return false;
         }
-        // Validate alternate phone if provided (must be 10 digits)
+        // Validate alternate phone if provided 
         if (formData.alternatePhone && formData.alternatePhone.length > 0) {
           if (!/^\d{10}$/.test(formData.alternatePhone.replace(/\D/g, ''))) {
             Alert.alert('Invalid Phone', 'Alternate phone must be 10 digits');
