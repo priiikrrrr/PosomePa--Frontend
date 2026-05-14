@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "PosomePa",
-    "slug": "posomepa",
+    "slug": "leaselink",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "scheme": "posomepa",
+    "scheme": "leaselink",
     "splash": {
       "resizeMode": "contain",
       "backgroundColor": "#8B5CF6"
@@ -26,7 +26,7 @@
         "backgroundColor": "#8B5CF6"
       },
       "package": "com.leaselink.app",
-      "googleServicesFile": "./google-services.json",
+      "googleServicesFile": "google-services.json",
       "largeHeap": true,
       "permissions": [
         "android.permission.CAMERA",
