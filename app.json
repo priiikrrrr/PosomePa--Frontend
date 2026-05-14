@@ -27,7 +27,6 @@
       },
       "package": "com.leaselink.app",
       "googleServicesFile": "google-services.json",
-      "largeHeap": true,
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
